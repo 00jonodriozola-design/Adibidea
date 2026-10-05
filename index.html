@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="eu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aneren portfolioa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: Google Sites-like student page — banner header, tab nav, one section per page, single centred column */
+:root{
+  --bg:#f5f8f7; --surface:#ffffff; --fg:#1e2b2a; --muted:#5b6c6a;
+  --accent:#0f7a6c; --accent-soft:#dcefeb; --banner1:#0f7a6c; --banner2:#1b4f6b;
+  --line:#d7e2df; --note:#fff4d6; --note-fg:#6b4f00;
+  --display:"Fraunces", Georgia, serif;
+  --body:"Nunito Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111a19; --surface:#182321; --fg:#e4eeec; --muted:#9db0ad;
+  --accent:#5cc8b6; --accent-soft:#1f3a36; --banner1:#0c5a50; --banner2:#163a50;
+  --line:#2a3a37; --note:#3a3015; --note-fg:#f0d98a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111a19; --surface:#182321; --fg:#e4eeec; --muted:#9db0ad;
+  --accent:#5cc8b6; --accent-soft:#1f3a36; --banner1:#0c5a50; --banner2:#163a50;
+  --line:#2a3a37; --note:#3a3015; --note-fg:#f0d98a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.6}
+.note{background:var(--note);color:var(--note-fg);font-size:.85rem;text-align:center;padding:.5rem 16px}
+.banner{background:linear-gradient(120deg,var(--banner1),var(--banner2));color:#fff;padding-block:2.5rem 3rem;padding-inline:16px}
+.banner .wrap{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap}
+.avatar{width:84px;height:84px;flex:none;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.5)}
+.banner h1{font-family:var(--display);font-size:clamp(1.8rem,5vw,2.6rem);margin:0;line-height:1.1;text-wrap:balance}
+.banner p{margin:.25rem 0 0;opacity:.9}
+.wrap{max-width:52rem;margin:0 auto}
+nav{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:2}
+nav .wrap{display:flex;gap:.25rem;overflow-x:auto;padding-inline:16px}
+nav button{font:inherit;font-weight:600;font-size:.92rem;background:none;border:0;color:var(--muted);padding:.85rem .75rem;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+nav button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+nav button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+main{padding-block:2rem 3rem;padding-inline:16px}
+section h2{font-family:var(--display);font-size:1.6rem;margin:0 0 1rem;text-wrap:balance}
+section p{max-width:65ch;margin:0 0 1rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:.75rem;margin:1.5rem 0}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.85rem 1rem}
+.fact b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.hobbies{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem}
+.hobby{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.hobby svg{display:block;width:100%;height:auto;aspect-ratio:16/9;max-width:100%}
+.hobby div{padding:1rem}
+.hobby h3{margin:0 0 .35rem;font-size:1.05rem}
+.hobby p{margin:0;font-size:.95rem}
+.hobby small{display:block;margin-top:.6rem;color:var(--muted);font-size:.78rem}
+.goal{background:var(--accent-soft);border-radius:12px;padding:1.25rem 1.5rem;max-width:65ch}
+.goal strong{font-family:var(--display);font-size:1.25rem;display:block;margin-bottom:.4rem}
+ul.plain{padding-left:1.2rem;max-width:65ch}
+ul.plain li{margin-bottom:.4rem}
+.empty{border:2px dashed var(--line);border-radius:12px;padding:2rem;text-align:center;color:var(--muted)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;padding-block:1rem;padding-inline:16px}
+</style>
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<div class="note">Adibidea · 4. DBH Digitalizazioa · Ikasle asmatua</div>
+
+<header class="banner">
+  <div class="wrap">
+    <svg class="avatar" viewBox="0 0 84 84" aria-hidden="true">
+      <circle cx="42" cy="42" r="42" fill="#f2c14e"/>
+      <path d="M14 56 Q28 44 42 56 T70 56 V84 H14Z" fill="#2a9d8f"/>
+      <path d="M14 64 Q28 52 42 64 T70 64 V84 H14Z" fill="#1d6f68"/>
+      <circle cx="58" cy="26" r="9" fill="#fff6d8"/>
+    </svg>
+    <div>
+      <h1>Ane Etxeberria Lasa</h1>
+      <p>4. DBH B · Nire portfolioa</p>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Orriak">
+  <div class="wrap" role="tablist">
+    <button role="tab" id="t-hasiera" aria-selected="true" data-p="hasiera">Nire burua</button>
+    <button role="tab" id="t-zaletasunak" aria-selected="false" data-p="zaletasunak">Zaletasunak</button>
+    <button role="tab" id="t-espero" aria-selected="false" data-p="espero">Zer espero dut</button>
+    <button role="tab" id="t-helburua" aria-selected="false" data-p="helburua">Helburua</button>
+    <button role="tab" id="t-portfolioa" aria-selected="false" data-p="portfolioa">Portfolioa</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="hasiera" role="tabpanel">
+    <h2>Kaixo, Ane naiz!</h2>
+    <p>15 urte ditut eta 4. DBHko B taldean nago. Donostian bizi naiz, eta ikastolara bizikletaz etortzen naiz egunero.</p>
+    <p>Gustatzen zaizkit matematikak eta gauzak eskuz egitea. Denbora librean itsasoan egotea eta musika jotzea da nire gauza.</p>
+    <p>Webgune hau ikasturte honetako nire lanen portfolioa izango da. Hemen joango naiz gehitzen Digitalizazioan egiten ditudan proiektuak.</p>
+    <div class="facts">
+      <div class="fact"><b>Taldea</b>4. DBH B</div>
+      <div class="fact"><b>Hizkuntzak</b>Euskara, gaztelania, ingelesa</div>
+      <div class="fact"><b>Ikasgai gogokoena</b>Matematika</div>
+    </div>
+  </section>
+
+  <section id="zaletasunak" role="tabpanel" hidden>
+    <h2>Nire zaletasunak</h2>
+    <div class="hobbies">
+      <article class="hobby">
+        <svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect width="320" height="180" fill="#bfe3f0"/>
+          <circle cx="250" cy="45" r="22" fill="#ffd27a"/>
+          <path d="M0 120 Q60 70 120 115 T240 110 T320 115 V180 H0Z" fill="#2a9d8f"/>
+          <path d="M0 140 Q80 105 160 140 T320 138 V180 H0Z" fill="#1d6f68"/>
+          <path d="M120 112 l60 -6 l-8 6 z" fill="#f4a259"/>
+        </svg>
+        <div><h3>Surfa</h3><p>Udan Zurriolan ibiltzen naiz astebururo. Oraindik ikasten ari naiz, baina olatu txikiak harrapatzen ditut.</p><small>Irudia: neuk marraztua</small></div>
+      </article>
+      <article class="hobby">
+        <svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect width="320" height="180" fill="#2b2d42"/>
+          <g fill="#f8f9fa"><rect x="20" y="70" width="34" height="90"/><rect x="58" y="70" width="34" height="90"/><rect x="96" y="70" width="34" height="90"/><rect x="134" y="70" width="34" height="90"/><rect x="172" y="70" width="34" height="90"/><rect x="210" y="70" width="34" height="90"/><rect x="248" y="70" width="34" height="90"/></g>
+          <g fill="#111"><rect x="44" y="70" width="20" height="55"/><rect x="82" y="70" width="20" height="55"/><rect x="158" y="70" width="20" height="55"/><rect x="196" y="70" width="20" height="55"/><rect x="234" y="70" width="20" height="55"/></g>
+          <text x="160" y="45" text-anchor="middle" fill="#ffd27a" font-size="28" font-family="Georgia,serif">♪ ♫ ♪</text>
+        </svg>
+        <div><h3>Pianoa</h3><p>8 urterekin hasi nintzen musika eskolan. Orain film-soinu bandak jotzen saiatzen naiz.</p><small>Irudia: neuk marraztua</small></div>
+      </article>
+      <article class="hobby">
+        <svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect width="320" height="180" fill="#e9d8c4"/>
+          <rect x="95" y="55" width="130" height="85" rx="12" fill="#3d405b"/>
+          <rect x="130" y="42" width="45" height="18" rx="4" fill="#3d405b"/>
+          <circle cx="160" cy="98" r="30" fill="#81b29a"/>
+          <circle cx="160" cy="98" r="18" fill="#2b2d42"/>
+          <circle cx="205" cy="70" r="5" fill="#f2cc8f"/>
+        </svg>
+        <div><h3>Argazkigintza</h3><p>Mugikorrarekin paisaiak eta animaliak fotografiatzen ditut. Aurten argazkiak editatzen ikasi nahi dut.</p><small>Irudia: neuk marraztua</small></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="espero" role="tabpanel" hidden>
+    <h2>Ikasgai honetatik espero dudana</h2>
+    <p>Digitalizazioan ordenagailua tresna gisa erabiltzen ikasi nahi dut, ez bakarrik jolasteko edo bideoak ikusteko.</p>
+    <ul class="plain">
+      <li>Programazioaren oinarriak ikastea, nire jolas txiki bat egiteko.</li>
+      <li>Argazkiak eta bideoak hobeto editatzen jakitea.</li>
+      <li>Interneten nire datuak nola babestu ulertzea.</li>
+    </ul>
+  </section>
+
+  <section id="helburua" role="tabpanel" hidden>
+    <h2>Ikasturteko helburua</h2>
+    <div class="goal">
+      <strong>Ekainerako, Scratch-en jolas bat sortu eta gelan aurkeztea.</strong>
+      Jolasak gutxienez 3 maila izango ditu eta puntuazio-sistema bat. Hilero aurrerapen bat gehituko dut portfolioan.
+    </div>
+  </section>
+
+  <section id="portfolioa" role="tabpanel" hidden>
+    <h2>Portfolioa</h2>
+    <div class="empty">Hemen joango dira ikasturteko lanak. Lehenengoa: webgune hau bera.</div>
+  </section>
+</main>
+
+<footer><div class="wrap">Lauaizeta Ikastola · Digitalizazioa 2026-27 · Irakaslearekin partekatua, argitaratu gabe</div></footer>
+
+<script>
+const tabs=[...document.querySelectorAll('nav button')];
+function show(id){
+  tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.p===id));
+  document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==id);
+}
+tabs.forEach(b=>b.addEventListener('click',()=>show(b.dataset.p)));
+const h=location.hash.slice(1); if(document.getElementById(h)) show(h);
+</script>
+</body>
+</html>
